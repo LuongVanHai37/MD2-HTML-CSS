@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .ex1 {
+            width: 500px;
+            margin: auto;
+            border: 3px solid black;
+        }
+
+        .ex2 {
+            max-width: 500px;
+            margin: auto;
+            border: 3px solid black;
+        }
+
+        .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        div {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+
+        .img1 {
+            float: right;
+        }
+
+        .img2 {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+<h2>CSS Max-width</h2>
+
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+
+<div class="ex2">This div element has max-width: 500px;</div>
+
+<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between
+    the two divs!</p>
+<h2>Center Align Elements</h2>
+<p>To horizontally center a block element (like div), use margin: auto;</p>
+
+<div class="center">
+    <p>Hello World!</p>
+    <img src="idol.jpg" alt="">
+</div>
+
+<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of
+    its container:</p>
+
+<div>
+    <h2>Without Clearfix</h2>
+    <img class="img1"
+         src="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2021/05/24193024/pineapple-1.jpg"
+         alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+<p style="clear:right">Add the clearfix hack to the containing element, to fix this problem:</p>
+
+<div class="clearfix">
+    <h2>With Clearfix</h2>
+    <img class="img2"
+         src="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2021/05/24193024/pineapple-1.jpg"
+         alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+</body>
+</html>
